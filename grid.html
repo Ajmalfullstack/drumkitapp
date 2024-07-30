@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      /* height: 100vh; */
+      display: grid;
+      gap: .2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
+
+    }
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-column: span 1;
+    }
+    .police {
+      background-color: rgb(19, 2, 36);
+      grid-column: span 1;
+    }
+    .laptop {
+      background-color: rgb(128, 5, 35);
+      grid-row: span 2;
+    }
+
+    .astronaut {
+      background-color: #03989E;
+      grid-column: span 1;
+      /* grid-area: 2 / 1 / 3 / 3; */
+    }
+
+    .book {
+      background-color: #E58331;
+      grid-area: 1 / 3 / -1 / -1 
+      /* Solution */
+      /* grid-area: 1 / 3 / 3 / 4 */
+      /* 
+      or
+      grid-area: 1 / 3 / -1 / -1 
+      
+      or
+      grid-row: span 2;
+      */
+    }
+  </style>
+</head>
+
+<body>
+  <figure class="pic">
+    <img src="images/icon-logo-linkedin.png" alt="linkedin logo">
+    <figcaption for="pic">Holla</figcaption>
+  </figure>
+   <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item engineer">🧑‍🔧</div>
+    <div class="item police">👮</div>
+    <div class="item book">📖</div>
+  </div>
+  <div class="container">
+    <div class="item laptop">💻</div>
+    <div class="item pilot">🧑‍✈️</div>
+    <div class="item doctor">🧑‍⚕️</div>
+    <div class="item singer">🧑‍🎤</div>
+    <div class="item chef">🧑‍🍳</div>
+  </div>
+</body>
+
+</html>
